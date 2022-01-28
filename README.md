@@ -1,4 +1,4 @@
-#### [🔗 Discord Link](https://discord.gg/zzugRm6Sbk) - [📖 Terms](https://github.com/Dev-Golem/oneclick-ip#terms) - [💡 Features](https://github.com/Dev-Golem/oneclick-ip#Features) - [Installation](https://github.com/Dev-Golem/oneclick-ip#installation)
+#### [🔗 Discord Link](https://discord.gg/uERACpy5w9) - [📖 Terms](https://github.com/tajgf/One-Click-Ip-Logger/#terms) - [💡 Features](https://github.com/tajgf/One-Click-Ip-Logger/#Features) - [Installation](https://github.com/tajgf/One-Click-Ip-Logger/#installation)
 
 # Support
 if you need support join the server and create a ticket
